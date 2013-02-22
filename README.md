@@ -60,15 +60,17 @@ Step#7
 
 Modify your controller:
 
-class PostsController < ApplicationController
-
-  def index
-
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
-    else
-      @posts = Post.all
+  class PostsController < ApplicationController
+  
+      def index
+  
+      if params[:tag]
+        @posts = Post.tagged_with(params[:tag])
+      else
+        @posts = Post.all
+      end
     end
+    
   end
-end
+  
 Voila! You have done it.
